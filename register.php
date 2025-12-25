@@ -48,7 +48,7 @@
         input[type="text"],
         input[type="email"],
         select {
-            width: 100%;
+            width: 97%;
             padding: 12px;
             border-radius: 8px;
             border: 1px solid #cdd7d2;
@@ -203,6 +203,5 @@
     </div>
 
 </body>
-
 
 </html>
