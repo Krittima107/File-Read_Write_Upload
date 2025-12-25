@@ -146,6 +146,13 @@
 
             <?php
             if (isset($_POST['submit'])) {
+
+                //เขียนเพิ่มกรณี host ไม่มีไฟล์ register.txt
+                if (!file_exists("register.txt")) {
+                    fopen("register.txt", "w");
+                    chmod("register.txt", 0666);
+                }
+
                 $fullname = $_POST['fullname'];
                 $email = $_POST['email'];
                 $course = $_POST['course'];
@@ -192,7 +199,7 @@
                             <td>$course</td>
                             <td>$food</td>
                             <td>$type</td>
-                            <td>" . number_format($price, 2) . "</td>
+                            <td>" . number_format((float) $price, 2) . "</td>
                           </tr>";
                 }
                 echo "</table>";
